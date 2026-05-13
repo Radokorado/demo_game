@@ -1,0 +1,252 @@
+[gd_scene format=3 uid="uid://bhjwklfi3vm3h"]
+
+[ext_resource type="Script" uid="uid://b2ge7crhfwm7i" path="res://scripts/ui/settings.gd" id="1_ao2gm"]
+[ext_resource type="PackedScene" uid="uid://betonvtxg5wu7" path="res://scence/ui/settings/hotkey_rebind.tscn" id="2_ecojn"]
+[ext_resource type="PackedScene" uid="uid://dr0ihu51kwt7q" path="res://scence/ui/settings/volume_slider.tscn" id="2_nn6bv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m4om4"]
+
+[node name="options" type="Control" unique_id=521903751]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ao2gm")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=220265919]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -181.0
+offset_top = -243.0
+offset_right = 181.0
+offset_bottom = 243.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.860369, 0.860369, 0.860369, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect" unique_id=15333793]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.029
+anchor_right = 0.5
+anchor_bottom = 0.029
+offset_left = -112.0
+offset_top = -0.0940008
+offset_right = 104.0
+offset_bottom = 30.906
+grow_horizontal = 2
+
+[node name="Graphics" type="Button" parent="ColorRect/HBoxContainer" unique_id=2065609230]
+custom_minimum_size = Vector2(35, 20)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_m4om4")
+text = "Graphics"
+
+[node name="Sound" type="Button" parent="ColorRect/HBoxContainer" unique_id=11390367]
+custom_minimum_size = Vector2(35, 20)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_m4om4")
+text = "Sound"
+
+[node name="Controls" type="Button" parent="ColorRect/HBoxContainer" unique_id=815511064]
+custom_minimum_size = Vector2(35, 20)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_m4om4")
+text = "Controls"
+
+[node name="Graphics" type="VBoxContainer" parent="ColorRect" unique_id=1236920968]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -143.0
+offset_top = -173.0
+offset_right = 139.0
+offset_bottom = 214.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect/Graphics" unique_id=2018628749]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/Graphics/ScrollContainer" unique_id=1784015503]
+layout_mode = 2
+
+[node name="window_mode" type="HBoxContainer" parent="ColorRect/Graphics/ScrollContainer/VBoxContainer" unique_id=1662439192]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ColorRect/Graphics/ScrollContainer/VBoxContainer/window_mode" unique_id=974239979]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Window mode"
+
+[node name="VSeparator" type="VSeparator" parent="ColorRect/Graphics/ScrollContainer/VBoxContainer/window_mode" unique_id=1173336889]
+layout_mode = 2
+
+[node name="OptionButton" type="OptionButton" parent="ColorRect/Graphics/ScrollContainer/VBoxContainer/window_mode" unique_id=1732266162]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="resolution" type="HBoxContainer" parent="ColorRect/Graphics/ScrollContainer/VBoxContainer" unique_id=904733293]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ColorRect/Graphics/ScrollContainer/VBoxContainer/resolution" unique_id=1209471634]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Resolution"
+
+[node name="VSeparator" type="VSeparator" parent="ColorRect/Graphics/ScrollContainer/VBoxContainer/resolution" unique_id=529499827]
+layout_mode = 2
+
+[node name="OptionButton" type="OptionButton" parent="ColorRect/Graphics/ScrollContainer/VBoxContainer/resolution" unique_id=1836644914]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="vsync" type="HBoxContainer" parent="ColorRect/Graphics/ScrollContainer/VBoxContainer" unique_id=1187253456]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ColorRect/Graphics/ScrollContainer/VBoxContainer/vsync" unique_id=717014747]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Vsync"
+
+[node name="VSeparator" type="VSeparator" parent="ColorRect/Graphics/ScrollContainer/VBoxContainer/vsync" unique_id=207093672]
+layout_mode = 2
+
+[node name="vsync" type="CheckBox" parent="ColorRect/Graphics/ScrollContainer/VBoxContainer/vsync" unique_id=52202290]
+layout_mode = 2
+
+[node name="Sound" type="VBoxContainer" parent="ColorRect" unique_id=797700327]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -141.0
+offset_top = -181.0
+offset_right = 141.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="master_label" type="Label" parent="ColorRect/Sound" unique_id=480709530]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Master"
+
+[node name="master" parent="ColorRect/Sound" unique_id=1311770956 instance=ExtResource("2_nn6bv")]
+layout_mode = 2
+bus_name = "Master"
+
+[node name="music_label" type="Label" parent="ColorRect/Sound" unique_id=1942258764]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Music"
+
+[node name="music" parent="ColorRect/Sound" unique_id=495242369 instance=ExtResource("2_nn6bv")]
+layout_mode = 2
+bus_name = "music"
+
+[node name="sfx_label" type="Label" parent="ColorRect/Sound" unique_id=741090986]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Sfx"
+
+[node name="sfx" parent="ColorRect/Sound" unique_id=1855176531 instance=ExtResource("2_nn6bv")]
+layout_mode = 2
+bus_name = "sfx"
+
+[node name="Controls" type="VBoxContainer" parent="ColorRect" unique_id=722280730]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -157.0
+offset_top = -191.0
+offset_right = 158.0
+offset_bottom = 209.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect/Controls" unique_id=737271089]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/Controls/ScrollContainer" unique_id=638970556]
+layout_mode = 2
+theme_override_constants/separation = 53
+
+[node name="hotkey_rebind" parent="ColorRect/Controls/ScrollContainer/VBoxContainer" unique_id=152975619 instance=ExtResource("2_ecojn")]
+layout_mode = 2
+
+[node name="hotkey_rebind2" parent="ColorRect/Controls/ScrollContainer/VBoxContainer" unique_id=1038094919 instance=ExtResource("2_ecojn")]
+layout_mode = 2
+action_name = "right"
+
+[node name="hotkey_rebind3" parent="ColorRect/Controls/ScrollContainer/VBoxContainer" unique_id=1934278059 instance=ExtResource("2_ecojn")]
+layout_mode = 2
+action_name = "far"
+
+[node name="hotkey_rebind4" parent="ColorRect/Controls/ScrollContainer/VBoxContainer" unique_id=989839392 instance=ExtResource("2_ecojn")]
+layout_mode = 2
+action_name = "close"
+
+[node name="hotkey_rebind5" parent="ColorRect/Controls/ScrollContainer/VBoxContainer" unique_id=879940449 instance=ExtResource("2_ecojn")]
+layout_mode = 2
+action_name = "r"
+
+[node name="hotkey_rebind6" parent="ColorRect/Controls/ScrollContainer/VBoxContainer" unique_id=61303452 instance=ExtResource("2_ecojn")]
+layout_mode = 2
+action_name = "bend_cable"
+
+[node name="hotkey_rebind7" parent="ColorRect/Controls/ScrollContainer/VBoxContainer" unique_id=1435143215 instance=ExtResource("2_ecojn")]
+layout_mode = 2
+action_name = "straight_cabel"
+
+[node name="hotkey_rebind8" parent="ColorRect/Controls/ScrollContainer/VBoxContainer" unique_id=1060041289 instance=ExtResource("2_ecojn")]
+layout_mode = 2
+action_name = "camera_up"
+
+[node name="hotkey_rebind9" parent="ColorRect/Controls/ScrollContainer/VBoxContainer" unique_id=524087711 instance=ExtResource("2_ecojn")]
+layout_mode = 2
+action_name = "camera_down"
+
+[node name="hotkey_rebind10" parent="ColorRect/Controls/ScrollContainer/VBoxContainer" unique_id=2079094435 instance=ExtResource("2_ecojn")]
+layout_mode = 2
+action_name = "camera_left"
+
+[node name="hotkey_rebind11" parent="ColorRect/Controls/ScrollContainer/VBoxContainer" unique_id=356292459 instance=ExtResource("2_ecojn")]
+layout_mode = 2
+action_name = "camera_right"
+
+[node name="music" type="AudioStreamPlayer3D" parent="." unique_id=1255853688]
+bus = &"music"
+
+[node name="sound_effect" type="AudioStreamPlayer3D" parent="." unique_id=674379938]
+volume_db = -4.37
+bus = &"sfx"
+
+[connection signal="pressed" from="ColorRect/HBoxContainer/Graphics" to="." method="_on_graphics_pressed"]
+[connection signal="pressed" from="ColorRect/HBoxContainer/Sound" to="." method="_on_sound_pressed"]
+[connection signal="pressed" from="ColorRect/HBoxContainer/Controls" to="." method="_on_controls_pressed"]
+[connection signal="toggled" from="ColorRect/Graphics/ScrollContainer/VBoxContainer/vsync/vsync" to="." method="_on_vsync_toggled"]
+[connection signal="finished" from="music" to="." method="_on_music_finished"]
