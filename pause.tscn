@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://brjotvv2khysl"]
+
+[ext_resource type="Script" uid="uid://c08y3vpm3lt3e" path="res://pause.gd" id="1_lj1p2"]
+[ext_resource type="PackedScene" uid="uid://cm67o7m5xgxkb" path="res://scence/ui/settings/settings.tscn" id="2_aq7p1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ilcql"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p3b2e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_afept"]
+
+[node name="pause" type="Control" unique_id=293044282]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lj1p2")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1071415913]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -181.0
+offset_top = -243.0
+offset_right = 181.0
+offset_bottom = 243.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.860369, 0.860369, 0.860369, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect" unique_id=1077605856]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -47.0
+offset_top = -55.0
+offset_right = 20.0
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="continue" type="Button" parent="ColorRect/VBoxContainer" unique_id=1744660840]
+custom_minimum_size = Vector2(50, 20)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ilcql")
+text = "Continue"
+
+[node name="options" type="Button" parent="ColorRect/VBoxContainer" unique_id=1572645642]
+custom_minimum_size = Vector2(50, 20)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_p3b2e")
+text = "Оptions"
+
+[node name="quit_to_main_menu" type="Button" parent="ColorRect/VBoxContainer" unique_id=11158152]
+custom_minimum_size = Vector2(50, 20)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_p3b2e")
+text = "Quit to main menu"
+
+[node name="quit" type="Button" parent="ColorRect/VBoxContainer" unique_id=871792180]
+custom_minimum_size = Vector2(50, 20)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_afept")
+text = "Quit"
+
+[node name="settings" parent="." unique_id=1647358114 instance=ExtResource("2_aq7p1")]
+visible = false
+layout_mode = 1
+
+[connection signal="pressed" from="ColorRect/VBoxContainer/continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="ColorRect/VBoxContainer/options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="ColorRect/VBoxContainer/quit_to_main_menu" to="." method="_on_quit_to_main_menu_pressed"]
+[connection signal="pressed" from="ColorRect/VBoxContainer/quit" to="." method="_on_quit_pressed"]

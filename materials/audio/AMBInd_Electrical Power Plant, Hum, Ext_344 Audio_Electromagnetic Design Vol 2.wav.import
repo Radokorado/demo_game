@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://chaygvvsy0is1"
+path="res://.godot/imported/AMBInd_Electrical Power Plant, Hum, Ext_344 Audio_Electromagnetic Design Vol 2.wav-c66386f131b66111155a9bd2484073a0.sample"
+
+[deps]
+
+source_file="res://materials/audio/AMBInd_Electrical Power Plant, Hum, Ext_344 Audio_Electromagnetic Design Vol 2.wav"
+dest_files=["res://.godot/imported/AMBInd_Electrical Power Plant, Hum, Ext_344 Audio_Electromagnetic Design Vol 2.wav-c66386f131b66111155a9bd2484073a0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

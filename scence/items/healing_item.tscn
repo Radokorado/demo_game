@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bk3viylc1ok68"]
+
+[ext_resource type="Script" uid="uid://bfsb8jype14yg" path="res://scripts/items/healing_item.gd" id="1_36fvp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ilie7"]
+albedo_color = Color(0.67058825, 0, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_ko820"]
+material = SubResource("StandardMaterial3D_ilie7")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_y7aa7"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_36fvp"]
+viewport_path = NodePath("Sprite3D/SubViewport")
+
+[node name="healing_item" type="Node3D" unique_id=2049959603]
+script = ExtResource("1_36fvp")
+
+[node name="placeholder" type="MeshInstance3D" parent="." unique_id=920638436]
+mesh = SubResource("SphereMesh_ko820")
+
+[node name="Area3D" type="Area3D" parent="placeholder" unique_id=1351763851]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="placeholder/Area3D" unique_id=939333594]
+shape = SubResource("SphereShape3D_y7aa7")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=547506969]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 1.916595, -0.3838067)
+billboard = 1
+texture = SubResource("ViewportTexture_36fvp")
+
+[node name="SubViewport" type="SubViewport" parent="Sprite3D" unique_id=775805325]
+transparent_bg = true
+size = Vector2i(754, 275)
+
+[node name="Label" type="Label" parent="Sprite3D/SubViewport" unique_id=508375224]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 200
+text = "Healing"
+
+[connection signal="body_entered" from="placeholder/Area3D" to="." method="_on_area_3d_body_entered"]

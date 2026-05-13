@@ -1,4 +1,5 @@
 extends Control
+@onready var settings: Control = $settings
 
 
 func _on_start_pressed() -> void:
@@ -6,8 +7,8 @@ func _on_start_pressed() -> void:
 
 
 func _on_settings_pressed() -> void:
-	get_node("buttons").hide()
-
+	#get_node("buttons").hide()
+	settings.show()
 
 func _on_quit_pressed() -> void:
-	get_node("buttons").hide()
+	get_tree().quit()

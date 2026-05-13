@@ -1,0 +1,233 @@
+[gd_scene format=3 uid="uid://cm67o7m5xgxkb"]
+
+[ext_resource type="Script" uid="uid://b2ge7crhfwm7i" path="res://scripts/settings.gd" id="1_qw6nd"]
+[ext_resource type="PackedScene" uid="uid://betonvtxg5wu7" path="res://scence/ui/settings/hotkey_rebind.tscn" id="2_ecojn"]
+[ext_resource type="PackedScene" uid="uid://dr0ihu51kwt7q" path="res://scence/ui/settings/volume_slider.tscn" id="2_nn6bv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m4om4"]
+
+[node name="settings" type="Control" unique_id=1647358114]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qw6nd")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1980020487]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -181.0
+offset_top = -243.0
+offset_right = 181.0
+offset_bottom = 243.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.860369, 0.860369, 0.860369, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect" unique_id=1176199928]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.029
+anchor_right = 0.5
+anchor_bottom = 0.029
+offset_left = -112.0
+offset_top = -0.0940008
+offset_right = 104.0
+offset_bottom = 30.906
+grow_horizontal = 2
+
+[node name="Graphics" type="Button" parent="ColorRect/HBoxContainer" unique_id=412758982]
+custom_minimum_size = Vector2(35, 20)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_m4om4")
+text = "Graphics"
+
+[node name="Sound" type="Button" parent="ColorRect/HBoxContainer" unique_id=1521659615]
+custom_minimum_size = Vector2(35, 20)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_m4om4")
+text = "Sound"
+
+[node name="Controls" type="Button" parent="ColorRect/HBoxContainer" unique_id=1388586077]
+custom_minimum_size = Vector2(35, 20)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_m4om4")
+text = "Controls"
+
+[node name="Graphics" type="VBoxContainer" parent="ColorRect" unique_id=640860114]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -143.0
+offset_top = -173.0
+offset_right = 139.0
+offset_bottom = 214.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect/Graphics" unique_id=1834995798]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/Graphics/ScrollContainer" unique_id=1481689827]
+layout_mode = 2
+
+[node name="window_mode" type="HBoxContainer" parent="ColorRect/Graphics/ScrollContainer/VBoxContainer" unique_id=1249080728]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ColorRect/Graphics/ScrollContainer/VBoxContainer/window_mode" unique_id=841358779]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Window mode"
+
+[node name="VSeparator" type="VSeparator" parent="ColorRect/Graphics/ScrollContainer/VBoxContainer/window_mode" unique_id=75776439]
+layout_mode = 2
+
+[node name="OptionButton" type="OptionButton" parent="ColorRect/Graphics/ScrollContainer/VBoxContainer/window_mode" unique_id=2146077359]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="resolution" type="HBoxContainer" parent="ColorRect/Graphics/ScrollContainer/VBoxContainer" unique_id=1049696034]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ColorRect/Graphics/ScrollContainer/VBoxContainer/resolution" unique_id=634057232]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Resolution"
+
+[node name="VSeparator" type="VSeparator" parent="ColorRect/Graphics/ScrollContainer/VBoxContainer/resolution" unique_id=851758931]
+layout_mode = 2
+
+[node name="OptionButton" type="OptionButton" parent="ColorRect/Graphics/ScrollContainer/VBoxContainer/resolution" unique_id=1675268696]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="vsync" type="HBoxContainer" parent="ColorRect/Graphics/ScrollContainer/VBoxContainer" unique_id=692752579]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ColorRect/Graphics/ScrollContainer/VBoxContainer/vsync" unique_id=1505598229]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Vsync"
+
+[node name="VSeparator" type="VSeparator" parent="ColorRect/Graphics/ScrollContainer/VBoxContainer/vsync" unique_id=811154073]
+layout_mode = 2
+
+[node name="vsync" type="CheckBox" parent="ColorRect/Graphics/ScrollContainer/VBoxContainer/vsync" unique_id=711435494]
+layout_mode = 2
+
+[node name="Sound" type="VBoxContainer" parent="ColorRect" unique_id=694604216]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -141.0
+offset_top = -181.0
+offset_right = 141.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="master_label" type="Label" parent="ColorRect/Sound" unique_id=2090668102]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Master"
+
+[node name="master" parent="ColorRect/Sound" unique_id=1984593598 instance=ExtResource("2_nn6bv")]
+layout_mode = 2
+bus_name = "Master"
+
+[node name="music_label" type="Label" parent="ColorRect/Sound" unique_id=744624082]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Music"
+
+[node name="music" parent="ColorRect/Sound" unique_id=1440592195 instance=ExtResource("2_nn6bv")]
+layout_mode = 2
+bus_name = "music"
+
+[node name="sfx_label" type="Label" parent="ColorRect/Sound" unique_id=1124098575]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Sfx"
+
+[node name="sfx" parent="ColorRect/Sound" unique_id=515935439 instance=ExtResource("2_nn6bv")]
+layout_mode = 2
+bus_name = "sfx"
+
+[node name="Controls" type="VBoxContainer" parent="ColorRect" unique_id=1632787009]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -157.0
+offset_top = -191.0
+offset_right = 158.0
+offset_bottom = 209.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect/Controls" unique_id=416929001]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/Controls/ScrollContainer" unique_id=966459232]
+layout_mode = 2
+theme_override_constants/separation = 53
+
+[node name="hotkey_rebind" parent="ColorRect/Controls/ScrollContainer/VBoxContainer" unique_id=1907602885 instance=ExtResource("2_ecojn")]
+layout_mode = 2
+action_name = "move_up"
+
+[node name="hotkey_rebind2" parent="ColorRect/Controls/ScrollContainer/VBoxContainer" unique_id=380980938 instance=ExtResource("2_ecojn")]
+layout_mode = 2
+action_name = "move_down"
+
+[node name="hotkey_rebind3" parent="ColorRect/Controls/ScrollContainer/VBoxContainer" unique_id=400795133 instance=ExtResource("2_ecojn")]
+layout_mode = 2
+action_name = "move_left"
+
+[node name="hotkey_rebind4" parent="ColorRect/Controls/ScrollContainer/VBoxContainer" unique_id=2101769436 instance=ExtResource("2_ecojn")]
+layout_mode = 2
+action_name = "move_right"
+
+[node name="hotkey_rebind5" parent="ColorRect/Controls/ScrollContainer/VBoxContainer" unique_id=1416063133 instance=ExtResource("2_ecojn")]
+layout_mode = 2
+action_name = "shoot"
+
+[node name="hotkey_rebind6" parent="ColorRect/Controls/ScrollContainer/VBoxContainer" unique_id=80188730 instance=ExtResource("2_ecojn")]
+layout_mode = 2
+action_name = "esk"
+
+[node name="music" type="AudioStreamPlayer3D" parent="." unique_id=1532936348]
+bus = &"music"
+
+[node name="sound_effect" type="AudioStreamPlayer3D" parent="." unique_id=245393026]
+volume_db = -4.37
+bus = &"sfx"
+
+[connection signal="pressed" from="ColorRect/HBoxContainer/Graphics" to="." method="_on_graphics_pressed"]
+[connection signal="pressed" from="ColorRect/HBoxContainer/Sound" to="." method="_on_sound_pressed"]
+[connection signal="pressed" from="ColorRect/HBoxContainer/Controls" to="." method="_on_controls_pressed"]
+[connection signal="toggled" from="ColorRect/Graphics/ScrollContainer/VBoxContainer/vsync/vsync" to="." method="_on_vsync_toggled"]
+[connection signal="finished" from="music" to="." method="_on_music_finished"]

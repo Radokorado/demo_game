@@ -1,0 +1,185 @@
+[gd_scene format=3 uid="uid://dwu6j13tredw0"]
+
+[ext_resource type="Script" uid="uid://b2ge7crhfwm7i" path="res://scripts/settings.gd" id="1_gm65n"]
+[ext_resource type="PackedScene" uid="uid://dr0ihu51kwt7q" path="res://scence/ui/volume_slider.tscn" id="2_wqwpj"]
+
+[node name="settings" type="Control" unique_id=1590652631]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_gm65n")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=468782551]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.576471)
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect" unique_id=712964059]
+custom_minimum_size = Vector2(750, 900)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -375.0
+offset_top = -450.0
+offset_right = 375.0
+offset_bottom = 450.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(375, 460)
+color = Color(0.215902, 0.215902, 0.215902, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/ColorRect" unique_id=783837614]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 31.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="Graphics" type="Button" parent="ColorRect/ColorRect/HBoxContainer" unique_id=1020015251]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Graphics"
+
+[node name="Sound" type="Button" parent="ColorRect/ColorRect/HBoxContainer" unique_id=1170320161]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Sound"
+
+[node name="Controls" type="Button" parent="ColorRect/ColorRect/HBoxContainer" unique_id=200314378]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Controls"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ColorRect" unique_id=1114789660]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.056
+anchor_right = 0.9
+anchor_bottom = 0.944
+offset_top = 66.274
+offset_bottom = -66.2742
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect/ColorRect/VBoxContainer" unique_id=1365293893]
+custom_minimum_size = Vector2(600, 800)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/ColorRect/VBoxContainer/ScrollContainer" unique_id=1071984234]
+custom_minimum_size = Vector2(600, 800)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="window_mode" type="HBoxContainer" parent="ColorRect/ColorRect/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1666549339]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ColorRect/ColorRect/VBoxContainer/ScrollContainer/VBoxContainer/window_mode" unique_id=1538151243]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+text = "dsaffsasddsasdaf"
+
+[node name="VSeparator" type="VSeparator" parent="ColorRect/ColorRect/VBoxContainer/ScrollContainer/VBoxContainer/window_mode" unique_id=2082270487]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+
+[node name="OptionButton" type="OptionButton" parent="ColorRect/ColorRect/VBoxContainer/ScrollContainer/VBoxContainer/window_mode" unique_id=869478721]
+custom_minimum_size = Vector2(256, 68)
+layout_mode = 2
+
+[node name="resolution" type="HBoxContainer" parent="ColorRect/ColorRect/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=2069970082]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ColorRect/ColorRect/VBoxContainer/ScrollContainer/VBoxContainer/resolution" unique_id=1703427112]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+text = "dsaffsasddsasdaf"
+
+[node name="VSeparator" type="VSeparator" parent="ColorRect/ColorRect/VBoxContainer/ScrollContainer/VBoxContainer/resolution" unique_id=532988831]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+
+[node name="resolution" type="OptionButton" parent="ColorRect/ColorRect/VBoxContainer/ScrollContainer/VBoxContainer/resolution" unique_id=623505633]
+custom_minimum_size = Vector2(256, 68)
+layout_mode = 2
+
+[node name="scaling mode" type="HBoxContainer" parent="ColorRect/ColorRect/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1687507079]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ColorRect/ColorRect/VBoxContainer/ScrollContainer/VBoxContainer/scaling mode" unique_id=1138282834]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+text = "dsaffsasddsasdaf"
+
+[node name="VSeparator" type="VSeparator" parent="ColorRect/ColorRect/VBoxContainer/ScrollContainer/VBoxContainer/scaling mode" unique_id=578255238]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+
+[node name="scaling mode" type="OptionButton" parent="ColorRect/ColorRect/VBoxContainer/ScrollContainer/VBoxContainer/scaling mode" unique_id=260098465]
+custom_minimum_size = Vector2(256, 68)
+layout_mode = 2
+selected = 0
+item_count = 3
+popup/item_0/text = "SCALER"
+popup/item_0/id = 0
+popup/item_0/disabled = true
+popup/item_0/separator = true
+popup/item_1/text = "BILINEAR"
+popup/item_1/id = 1
+popup/item_2/text = "AMS FSR 2.2"
+popup/item_2/id = 2
+
+[node name="fsr options" type="OptionButton" parent="ColorRect/ColorRect/VBoxContainer/ScrollContainer/VBoxContainer/scaling mode" unique_id=1952388952]
+visible = false
+custom_minimum_size = Vector2(256, 68)
+layout_mode = 2
+selected = 0
+item_count = 5
+popup/item_0/text = "FSR options"
+popup/item_0/id = 0
+popup/item_0/disabled = true
+popup/item_0/separator = true
+popup/item_1/text = "performace"
+popup/item_1/id = 1
+popup/item_2/text = "Balanced"
+popup/item_2/id = 2
+popup/item_3/text = "Quality"
+popup/item_3/id = 3
+popup/item_4/text = "Ultra quality"
+popup/item_4/id = 4
+
+[node name="vsync" type="CheckBox" parent="ColorRect/ColorRect/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1266384348]
+layout_mode = 2
+
+[node name="sound" parent="." unique_id=1082527949 instance=ExtResource("2_wqwpj")]
+visible = false
+layout_mode = 1
+
+[connection signal="pressed" from="ColorRect/ColorRect/HBoxContainer/Graphics" to="." method="_on_button_pressed"]
+[connection signal="toggled" from="ColorRect/ColorRect/VBoxContainer/ScrollContainer/VBoxContainer/vsync" to="." method="_on_vsync_toggled"]

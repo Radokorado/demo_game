@@ -32,11 +32,11 @@ var is_attacking: bool = false
 
 # --- СТАРТИРАНЕ ---
 func _ready():
+	Signals.connect("healing", Callable(self, "_on_healing"))
 	spawn_hero()
 	if health_bar:
 		health_bar.max_value = max_health
 		health_bar.value = current_health
-
 # --- ОСНОВЕН ЦИКЪЛ ---
 func _physics_process(_delta):
 	
@@ -76,6 +76,11 @@ func _physics_process(_delta):
 		shoot()
 
 # --- ФУНКЦИИ ---
+
+func _on_healing(healing_value):
+	current_health += healing_value
+	health_bar.value = current_health
+
 func aim_weapon_at_mouse():
 	var mouse_pos = get_viewport().get_mouse_position()
 	var ray_origin = camera.project_ray_origin(mouse_pos)
@@ -211,7 +216,7 @@ func spawn_hero():
 	
 	anim_tree.set("parameters/LifeState/transition_request", "Alive")
 	anim_tree.set("parameters/SpawnShot/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
-	
+	health_bar.value = health_bar.max_value
 	await get_tree().create_timer(2.0).timeout
 	is_invincible = false
 	if shield_effect:

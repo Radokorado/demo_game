@@ -1,6 +1,18 @@
 [gd_scene format=3 uid="uid://du65iw6qddlkt"]
 
 [ext_resource type="Script" uid="uid://d0b88hytm6fjs" path="res://scripts/main_node.gd" id="1_lwogq"]
+[ext_resource type="PackedScene" uid="uid://dt3rpxwt74tgh" path="res://scence/ui/start_ui.tscn" id="2_dhalm"]
+[ext_resource type="PackedScene" uid="uid://brjotvv2khysl" path="res://pause.tscn" id="3_bxfy6"]
 
 [node name="main_node" type="Node" unique_id=928785018]
+process_mode = 3
 script = ExtResource("1_lwogq")
+
+[node name="start ui" type="CanvasLayer" parent="." unique_id=1479173754]
+
+[node name="start_ui" parent="start ui" unique_id=817882027 instance=ExtResource("2_dhalm")]
+
+[node name="pause" type="CanvasLayer" parent="." unique_id=14710815]
+visible = false
+
+[node name="pause" parent="pause" unique_id=293044282 instance=ExtResource("3_bxfy6")]

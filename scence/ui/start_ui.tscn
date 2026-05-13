@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://dt3rpxwt74tgh"]
+
+[ext_resource type="Script" uid="uid://bulsqiscvxb7" path="res://scripts/start_ui.gd" id="1_6i85u"]
+[ext_resource type="PackedScene" uid="uid://cm67o7m5xgxkb" path="res://scence/ui/settings/settings.tscn" id="2_c2r5b"]
+
+[node name="start_ui" type="Control" unique_id=817882027]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6i85u")
+
+[node name="buttons" type="VBoxContainer" parent="." unique_id=62448705]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -50.5
+offset_right = 35.0
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="start" type="Button" parent="buttons" unique_id=497400560]
+layout_mode = 2
+text = "Start"
+
+[node name="settings" type="Button" parent="buttons" unique_id=209674347]
+layout_mode = 2
+text = "Settings"
+
+[node name="quit" type="Button" parent="buttons" unique_id=1402886390]
+layout_mode = 2
+text = "Quit"
+
+[node name="settings" parent="." unique_id=1647358114 instance=ExtResource("2_c2r5b")]
+visible = false
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 925.0
+offset_top = 559.5
+offset_right = 995.0
+offset_bottom = 559.5
+grow_horizontal = 1
+grow_vertical = 1
+
+[connection signal="pressed" from="buttons/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="buttons/settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="buttons/quit" to="." method="_on_quit_pressed"]
