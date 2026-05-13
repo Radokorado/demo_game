@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dfdo5g6wdnqkl"]
+
+[ext_resource type="Script" uid="uid://oqnnipsy1r8w" path="res://scripts/skeleton_attack_range.gd" id="1_7patg"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_v8qja"]
+radius = 0.25
+height = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t4vbm"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_2b2rl"]
+radius = 0.25
+
+[node name="Skeleton_Attack-Range" type="Area3D" unique_id=592412257 groups=["bulet_minion"]]
+collision_layer = 6
+collision_mask = 9
+script = ExtResource("1_7patg")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1153701155]
+mesh = SubResource("SphereMesh_v8qja")
+surface_material_override/0 = SubResource("StandardMaterial3D_t4vbm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1215381554]
+shape = SubResource("SphereShape3D_2b2rl")
+
+[node name="Timer" type="Timer" parent="." unique_id=711758670]
+wait_time = 2.0
+autostart = true
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
