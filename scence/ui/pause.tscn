@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://brjotvv2khysl"]
 
-[ext_resource type="Script" uid="uid://c08y3vpm3lt3e" path="res://pause.gd" id="1_lj1p2"]
+[ext_resource type="Script" uid="uid://c08y3vpm3lt3e" path="res://scripts/ui/pause.gd" id="1_lj1p2"]
 [ext_resource type="PackedScene" uid="uid://cm67o7m5xgxkb" path="res://scence/ui/settings/settings.tscn" id="2_aq7p1"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ilcql"]

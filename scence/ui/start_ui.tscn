@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dt3rpxwt74tgh"]
 
-[ext_resource type="Script" uid="uid://bulsqiscvxb7" path="res://scripts/start_ui.gd" id="1_6i85u"]
+[ext_resource type="Script" uid="uid://bulsqiscvxb7" path="res://scripts/ui/start_ui.gd" id="1_6i85u"]
 [ext_resource type="PackedScene" uid="uid://cm67o7m5xgxkb" path="res://scence/ui/settings/settings.tscn" id="2_c2r5b"]
 
 [node name="start_ui" type="Control" unique_id=817882027]
