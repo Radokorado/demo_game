@@ -27,5 +27,5 @@ Left Click / [key] — Shoot
 [key] — Interact
 
 ## Built with
-- Godot 4
+- Godot 4.6.2
 - GDScript
